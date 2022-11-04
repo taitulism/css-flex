@@ -1,0 +1,30 @@
+{
+	"name": "<pkg-name>",
+	"description": "Doing stuff.",
+	"license": "MIT",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./dist/<pkg-name>.min.css",
+	"devDependencies": {
+		"cssnano": "^5.1.14",
+		"postcss-cli": "^10.0.0",
+		"postcss-import": "^15.0.0"
+	},
+	"scripts": {
+		"dev": "postcss src/index.css --output dist/<pkg-name>.min.css --watch",
+		"build": "postcss src/index.css --output dist/<pkg-name>.min.css"
+	},
+	"author": "Taitu Lizenbaum <taitu.dev@gmail.com>",
+	"homepage": "https://github.com/taitulism/<pkg-name>#readme",
+	"bugs": {
+		"url": "https://github.com/taitulism/<pkg-name>/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/taitulism/<pkg-name>.git"
+	},
+	"keywords": [
+		"css",
+		"style"
+	]
+}
