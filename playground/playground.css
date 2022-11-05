@@ -76,11 +76,11 @@ code {
 }
 
 .row-triplet div {
-	height: 50px;
+	height: 55px;
 }
 
 .column-triplet div {
-	width: 50px;
+	width: 55px;
 	height: 200px;
 	margin: 0 auto;
 }

@@ -4,14 +4,20 @@
 	"license": "MIT",
 	"version": "0.0.0",
 	"private": true,
-	"main": "./dist/css-flex.min.css",
+	"main": "./flex.css",
+	"files": [
+		"flex.min.css",
+		"flex.css"
+	],
 	"devDependencies": {
 		"cssnano": "^5.1.14",
 		"postcss-cli": "^10.0.0"
 	},
 	"scripts": {
-		"dev": "postcss ./flex.css --output dist/css-flex.min.css --watch",
-		"build": "postcss ./flex.css --output dist/css-flex.min.css"
+		"dev": "postcss ./flex.css --output ./flex.min.css --watch",
+		"build": "postcss ./flex.css --output ./flex.min.css",
+		"version": "npm run build && git add ./flex.min.css",
+		"postversion": "git push && git push --tags"
 	},
 	"author": "Taitu Lizenbaum <taitu.dev@gmail.com>",
 	"homepage": "https://github.com/taitulism/css-flex#readme",
