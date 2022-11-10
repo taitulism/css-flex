@@ -16,6 +16,8 @@
 	"scripts": {
 		"dev": "postcss ./flex.css --output ./flex.min.css --watch",
 		"build": "postcss ./flex.css --output ./flex.min.css",
+		"postbuild": "npm run banner",
+		"banner": "node build-utils/add-banner.js ./flex.min.css",
 		"version": "npm run build && git add ./flex.min.css",
 		"postversion": "git push && git push --tags"
 	},
