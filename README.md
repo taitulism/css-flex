@@ -198,12 +198,10 @@ For multiple items use one of:
 ```
 .flex-row-center             .flex-col-center
 ┌────────────┐               ┌───────────┐
-│            │               │           │
 │            │               │    ┌─┐    │
 │   ┌─┐┌─┐   │               │    └─┘    │
 │   └─┘└─┘   │               │    ┌─┐    │
 │            │               │    └─┘    │
-│            │               │           │
 └────────────┘               └───────────┘
 ```
 
@@ -241,14 +239,15 @@ The most common usages are:
 &nbsp;
 
 # Reference Images
+> **Pseudo Selectors Ahead** - Spaces were added for readability. In real usage the CSS selector should have no spaces (e.g. `.flex-row-start.align-top`)
 ## Rows 
-![alt](images/flex-row.png)
+![flex-row reference](images/flex-row.png)
 
 ## Columns
-![alt](images/flex-col.png)
+![flex-col reference](images/flex-col.png)
 
 ## Misc.
-![alt](images/flex-misc.png)
+![other flex classnames reference](images/flex-misc.png)
 
 &nbsp;
 
