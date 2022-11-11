@@ -62,7 +62,7 @@ Beahvior
 --------
 > **NOTE:** Everything in these docs is true for both rows and columns.
 
-Naturally, by default, flex items will be placed at the top-left corner.
+Naturally, flex items will be placed at the top-left corner.
 
 For example, a row:
 ```
@@ -74,7 +74,7 @@ For example, a row:
 │                  │
 └──────────────────┘
 ```
-Well, this shouldn't be the default IMHO, the items should be centered on the secondary axis by default (in this case - on the `y` axis), like this:
+Well, this shouldn't be the default beahvior IMHO, the items should be centered on the secondary axis by default (in this case - on the `y` axis), like this:
 ```
 ┌──────────────────┐
 │                  │
@@ -106,34 +106,33 @@ To place the items along the main axis use one of the suffixes:
 ```
 start | center | end | spread
 ```
-> `-start` is the default placement for the main axis:  
-`flex-row` is an alias of `flex-row-start`  
-`flex-col` is an alias of `flex-col-start`
+> `start` is the default placement for the main axis:  
+  `flex-row` is an alias of `flex-row-start`  
+  `flex-col` is an alias of `flex-col-start`
 
-For example:
+`.flex-row-start` / `.flex-row`
 ```
-.flex-row-start / .flex-row
 ┌──────────────┐
 │ ┌──┐┌──┐     │
 │ └──┘└──┘     │
 └──────────────┘
 ```
+`.flex-row-center`
 ```
-.flex-row-center 
 ┌──────────────┐
 │   ┌──┐┌──┐   │
 │   └──┘└──┘   │
 └──────────────┘
 ```
+`.flex-row-end`
 ```
-.flex-row-end
 ┌──────────────┐
 │     ┌──┐┌──┐ │
 │     └──┘└──┘ │
 └──────────────┘
 ```
+`.flex-row-spread`
 ```
-.flex-row-spread
 ┌──────────────┐
 │ ┌──┐    ┌──┐ │
 │ └──┘    └──┘ │  (A.K.A "space-between")
@@ -161,16 +160,16 @@ left | right
 
 For example:
 ```
-.flex-row-center        .flex-col-spread
-.align-top              .align-right
-┌───────────────┐       ┌────────┐
-│   ┌──┐ ┌──┐   │       │   ┌──┐ │
-│   └──┘ └──┘   │       │   └──┘ │
-│               │       │        │
-│               │       │        │
-└───────────────┘       │   ┌──┐ │
-                        │   └──┘ │
-                        └────────┘
+.flex-row-center            .flex-col-spread
+.align-top                  .align-right
+┌───────────────┐           ┌────────┐
+│   ┌──┐ ┌──┐   │           │   ┌──┐ │
+│   └──┘ └──┘   │           │   └──┘ │
+│               │           │        │
+│               │           │        │
+└───────────────┘           │   ┌──┐ │
+                            │   └──┘ │
+                            └────────┘
 ```
 > **NOTE:** You can only use the secondary axis classnames together with a main axis classname.
 
@@ -181,10 +180,32 @@ Centering
 ---------
 To center a single item inside a container use (on the container):
 * `.flex-center`
+```
+.flex-center
+┌──────────────┐
+│              │
+│     ┌──┐     │
+│     └──┘     │
+│              │
+└──────────────┘
+```
 
 For multiple items use one of:
 * `.flex-row-center`
 * `.flex-col-center`
+
+```
+.flex-row-center      .flex-col-center
+┌──────────────┐      ┌──────────────┐
+│              │      │              │
+│              │      │     ┌──┐     │
+│   ┌──┐┌──┐   │      │     └──┘     │
+│   └──┘└──┘   │      │     ┌──┐     │
+│              │      │     └──┘     │
+│              │      │              │
+└──────────────┘      └──────────────┘
+```
+
 
 > In any case, don't use a secondary axis classname.
 
@@ -218,8 +239,6 @@ The most common usages are:
 
 &nbsp;
 
-&nbsp;
-
 # Reference Images
 ## Rows 
 ![alt](images/flex-row.png)
@@ -246,3 +265,11 @@ To work with the minified file, run:
 npm run dev
 ```
 and swap CSS references in the playground HTML
+
+Publish
+-------
+Currently there are no tests.
+
+Before publish run the HTML playground to verify everything visually.
+
+> Todo: Tests
