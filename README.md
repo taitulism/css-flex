@@ -50,8 +50,6 @@ Classnames
 &nbsp;
 
 ### **Flex item**
-[See a reference image](#misc)
-
 * `.flex-item`
 
 &nbsp;
@@ -245,9 +243,6 @@ The most common usages are:
 
 ## Columns
 ![flex-col reference](images/flex-col.png)
-
-## Misc.
-![other flex classnames reference](images/flex-misc.png)
 
 &nbsp;
 
