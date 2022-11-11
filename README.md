@@ -109,33 +109,35 @@ start | center | end | spread
 > * `flex-row` is an alias of `flex-row-start`  
 > * `flex-col` is an alias of `flex-col-start`
 
+&nbsp;
+
 `.flex-row-start` / `.flex-row`
 ```
-┌──────────────┐
-│ ┌──┐┌──┐     │
-│ └──┘└──┘     │
-└──────────────┘
+┌────────────────┐
+│ ┌──┐┌──┐       │
+│ └──┘└──┘       │
+└────────────────┘
 ```
 `.flex-row-center`
 ```
-┌──────────────┐
-│   ┌──┐┌──┐   │
-│   └──┘└──┘   │
-└──────────────┘
+┌────────────────┐
+│    ┌──┐┌──┐    │
+│    └──┘└──┘    │
+└────────────────┘
 ```
 `.flex-row-end`
 ```
-┌──────────────┐
-│     ┌──┐┌──┐ │
-│     └──┘└──┘ │
-└──────────────┘
+┌────────────────┐
+│       ┌──┐┌──┐ │
+│       └──┘└──┘ │
+└────────────────┘
 ```
-`.flex-row-spread`
+`.flex-row-spread` (A.K.A "space-between")
 ```
-┌──────────────┐
-│ ┌──┐    ┌──┐ │
-│ └──┘    └──┘ │  (A.K.A "space-between")
-└──────────────┘
+┌────────────────┐
+│ ┌──┐      ┌──┐ │
+│ └──┘      └──┘ │
+└────────────────┘
 ```
 
 > To see the column equivalents (e.g. `flex-col-start`), please tilt your head to the left :)
@@ -159,16 +161,16 @@ left | right
 
 For example:
 ```
-.flex-row-center            .flex-col-spread
-.align-top                  .align-right
-┌───────────────┐           ┌────────────┐
-│   ┌──┐ ┌──┐   │           │       ┌──┐ │
-│   └──┘ └──┘   │           │       └──┘ │
-│               │           │            │
-│               │           │            │
-└───────────────┘           │       ┌──┐ │
-                            │       └──┘ │
-                            └────────────┘
+.flex-row-center             .flex-col-spread
+.align-top                   .align-right
+┌───────────────┐            ┌────────────┐
+│   ┌──┐ ┌──┐   │            │       ┌──┐ │
+│   └──┘ └──┘   │            │       └──┘ │
+│               │            │            │
+│               │            │            │
+└───────────────┘            │       ┌──┐ │
+                             │       └──┘ │
+                             └────────────┘
 ```
 > **NOTE:** You can only use the secondary axis classnames together with a main axis classname.
 
@@ -194,15 +196,15 @@ For multiple items use one of:
 * `.flex-col-center`
 
 ```
-.flex-row-center         .flex-col-center
-┌────────────┐           ┌───────────┐
-│            │           │           │
-│            │           │    ┌─┐    │
-│   ┌─┐┌─┐   │           │    └─┘    │
-│   └─┘└─┘   │           │    ┌─┐    │
-│            │           │    └─┘    │
-│            │           │           │
-└────────────┘           └───────────┘
+.flex-row-center             .flex-col-center
+┌────────────┐               ┌───────────┐
+│            │               │           │
+│            │               │    ┌─┐    │
+│   ┌─┐┌─┐   │               │    └─┘    │
+│   └─┘└─┘   │               │    ┌─┐    │
+│            │               │    └─┘    │
+│            │               │           │
+└────────────┘               └───────────┘
 ```
 
 
