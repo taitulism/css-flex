@@ -20,8 +20,8 @@ CDN Link:
 Classnames
 ----------
 ### **Row**
-
 [See a reference image](#rows)
+
 #### Main axis (`x`) classnames:
 * `.flex-row-start` (alias: `.flex-row`)
 * `.flex-row-center` (alias: `.flex-center`)
@@ -35,8 +35,8 @@ Classnames
 &nbsp;
 
 ### **Column**
-
 [See a reference image](#columns)
+
 #### Main axis (`y`) classnames:
 * `.flex-col-start` (alias: `.flex-col`)
 * `.flex-col-center`
@@ -50,7 +50,6 @@ Classnames
 &nbsp;
 
 ### **Flex item**
-
 [See a reference image](#misc)
 
 * `.flex-item`
@@ -107,8 +106,8 @@ To place the items along the main axis use one of the suffixes:
 start | center | end | spread
 ```
 > `start` is the default placement for the main axis:  
-  `flex-row` is an alias of `flex-row-start`  
-  `flex-col` is an alias of `flex-col-start`
+> * `flex-row` is an alias of `flex-row-start`  
+> * `flex-col` is an alias of `flex-col-start`
 
 `.flex-row-start` / `.flex-row`
 ```
@@ -162,14 +161,14 @@ For example:
 ```
 .flex-row-center            .flex-col-spread
 .align-top                  .align-right
-┌───────────────┐           ┌────────┐
-│   ┌──┐ ┌──┐   │           │   ┌──┐ │
-│   └──┘ └──┘   │           │   └──┘ │
-│               │           │        │
-│               │           │        │
-└───────────────┘           │   ┌──┐ │
-                            │   └──┘ │
-                            └────────┘
+┌───────────────┐           ┌────────────┐
+│   ┌──┐ ┌──┐   │           │       ┌──┐ │
+│   └──┘ └──┘   │           │       └──┘ │
+│               │           │            │
+│               │           │            │
+└───────────────┘           │       ┌──┐ │
+                            │       └──┘ │
+                            └────────────┘
 ```
 > **NOTE:** You can only use the secondary axis classnames together with a main axis classname.
 
@@ -182,12 +181,12 @@ To center a single item inside a container use (on the container):
 * `.flex-center`
 ```
 .flex-center
-┌──────────────┐
-│              │
-│     ┌──┐     │
-│     └──┘     │
-│              │
-└──────────────┘
+┌─────────────┐
+│             │
+│     ┌─┐     │
+│     └─┘     │
+│             │
+└─────────────┘
 ```
 
 For multiple items use one of:
@@ -195,15 +194,15 @@ For multiple items use one of:
 * `.flex-col-center`
 
 ```
-.flex-row-center      .flex-col-center
-┌──────────────┐      ┌──────────────┐
-│              │      │              │
-│              │      │     ┌──┐     │
-│   ┌──┐┌──┐   │      │     └──┘     │
-│   └──┘└──┘   │      │     ┌──┐     │
-│              │      │     └──┘     │
-│              │      │              │
-└──────────────┘      └──────────────┘
+.flex-row-center         .flex-col-center
+┌────────────┐           ┌───────────┐
+│            │           │           │
+│            │           │    ┌─┐    │
+│   ┌─┐┌─┐   │           │    └─┘    │
+│   └─┘└─┘   │           │    ┌─┐    │
+│            │           │    └─┘    │
+│            │           │           │
+└────────────┘           └───────────┘
 ```
 
 
