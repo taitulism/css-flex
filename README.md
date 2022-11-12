@@ -1,19 +1,19 @@
-\<pkg-name>
-===========
+css.flex
+========
 The CSS flex classnames every project needs.
 
 ## Install
 ```sh
-npm install <pkg-name>
+npm install css.flex
 ```
 
 ```html
-<link rel="stylesheet" href="node_modules/<pkg-name>/flex.min.css" />
+<link rel="stylesheet" href="node_modules/css-flex/flex.min.css" />
 ```
 
 CDN Link:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taitulism/<pkg-name>@latest/flex.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taitulism/css-flex@latest/flex.min.css" />
 ```
 
 
