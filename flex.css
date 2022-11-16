@@ -40,6 +40,11 @@
 	align-items: flex-end;
 }
 
+.flexrow.stretch,
+.flexcol.stretch {
+	align-items: stretch;
+}
+
 .flex-center {
 	display: flex;
 	justify-content: center;

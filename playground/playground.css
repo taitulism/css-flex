@@ -39,6 +39,13 @@ code {
 	border: 1px solid #303030;
 }
 
+#flex .row-triplet .stretch span {
+	height: unset;
+}
+#flex .column-triplet .stretch span {
+	width: unset;
+}
+
 /* the actual flex containers, rows and columns  */
 .row-triplet div,
 .column-triplet div,
