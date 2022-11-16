@@ -1,81 +1,51 @@
-.flex-item {
-	flex-grow: 1;
-}
-
-.flex-row,
-.flex-row-start {
+.flexrow {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+}
+
+.flexcol {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flexrow.start,
+.flexcol.start {
 	justify-content: flex-start;
-	align-items: center;
 }
 
-.flex-center,
-.flex-row-center {
-	display: flex;
-	flex-direction: row;
+.flexrow.center,
+.flexcol.center {
 	justify-content: center;
-	align-items: center;
 }
 
-.flex-row-spread {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.flex-row-end {
-	display: flex;
-	flex-direction: row;
+.flexrow.end,
+.flexcol.end {
 	justify-content: flex-end;
-	align-items: center;
 }
 
-
-
-.flex-col,
-.flex-col-start {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.flex-col-center {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.flex-col-spread {
-	display: flex;
-	flex-direction: column;
+.flexrow.spread,
+.flexcol.spread {
 	justify-content: space-between;
-	align-items: center;
 }
 
-.flex-col-end {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-
-
-/*
-	Secondary Axis Modifiers
-	top / bottom for rows
-	left / right for column
-*/
-.align-top,
-.align-left {
+.flexrow.top,
+.flexcol.left {
 	align-items: flex-start;
 }
 
-.align-bottom,
-.align-right {
+.flexrow.bottom,
+.flexcol.right {
 	align-items: flex-end;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-item {
+	flex-grow: 1;
 }

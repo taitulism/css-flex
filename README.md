@@ -237,7 +237,6 @@ The most common usages are:
 &nbsp;
 
 # Reference Images
-> **Pseudo Selectors Ahead** - Spaces were added for readability. In real usage the CSS selector should have no spaces (e.g. `.flex-row-start.align-top`)
 ## Rows 
 ![flex-row reference](images/flex-row.png)
 
