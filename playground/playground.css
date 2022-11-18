@@ -37,6 +37,7 @@ code {
 	border-radius: 0;
 	margin-right: 1px;
 	background-color: inherit;
+	cursor: pointer;
 }
 
 .nav-btn.selected {
