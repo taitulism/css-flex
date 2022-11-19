@@ -1,54 +1,74 @@
-.flexrow {
+.flexrow,
+.flexrow-start {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-}
-
-.flexcol {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.flexrow.start,
-.flexcol.start {
 	justify-content: flex-start;
 }
 
-.flexrow.center,
-.flexcol.center {
+.flex-center,
+.flexrow-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	justify-content: center;
 }
 
-.flexrow.end,
-.flexcol.end {
+.flexrow-end {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	justify-content: flex-end;
 }
 
-.flexrow.spread,
-.flexcol.spread {
+.flexrow-spread {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	justify-content: space-between;
 }
 
-.flexrow.top,
-.flexcol.left {
+.flexcol,
+.flexcol-start {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.flexcol-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.flexcol-end {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.flexcol-spread {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.f-top,
+.f-left {
 	align-items: flex-start;
 }
 
-.flexrow.bottom,
-.flexcol.right {
+.f-bottom,
+.f-right {
 	align-items: flex-end;
 }
 
-.flexrow.stretch,
-.flexcol.stretch {
+.f-stretch {
 	align-items: stretch;
-}
-
-.flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .flex-item {
