@@ -11,7 +11,7 @@ npm install css.flex
 <link rel="stylesheet" href="node_modules/css-flex/flex.min.css" />
 ```
 
-CDN Link:
+or a CDN Link:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taitulism/css-flex@latest/flex.min.css" />
 ```
@@ -19,161 +19,168 @@ CDN Link:
 
 Classnames
 ----------
-### **Row**
-[See a reference image](#rows)
+>Reference Images: [Rows](#rows) | [Columns](#columns)
 
-#### Main axis (`x`) classnames:
-* `.flex-row-start` (alias: `.flex-row`)
-* `.flex-row-center` (alias: `.flex-center`)
-* `.flex-row-end`
-* `.flex-row-spread`
+### Row Classnames:
+Main axis (`x`)
+* `.flexrow`
+* `.flexrow-start` (alias: `.flexrow`)
+* `.flexrow-center` (alias: `.flex-center`)
+* `.flexrow-end`
+* `.flexrow-spread`
 
-#### Secondary axis (`y`) classnames:
-* `.align-top`
-* `.align-bottom`
+Secondary axis (`y`)
+* `.f-top`
+* `.f-bottom`
+* `.f-stretch`
 
-&nbsp;
 
-### **Column**
-[See a reference image](#columns)
+### Column Classnames:
+Main axis (`y`)
+* `.flexcol`
+* `.flexcol-start` (alias: `.flexcol`)
+* `.flexcol-center`
+* `.flexcol-end`
+* `.flexcol-spread`
 
-#### Main axis (`y`) classnames:
-* `.flex-col-start` (alias: `.flex-col`)
-* `.flex-col-center`
-* `.flex-col-end`
-* `.flex-col-spread`
+Secondary axis (`x`)
+* `.f-left`
+* `.f-right`
+* `.f-stretch`
 
-#### Secondary axis (`x`) classnames:
-* `.align-left`
-* `.align-right`
-
-&nbsp;
-
-### **Flex item**
+### Flex item
 * `.flex-item`
 
 &nbsp;
 
+A few words
+-----------
+>### TL;DR
+>With `css.flex` - flex containers are centered on the secondary axis by default because it makes more sense IMHO.
 
-Beahvior
---------
-> **NOTE:** Everything in these docs is true for both rows and columns.
+<details>
+	<summary>Read More...</summary>
+Flex containers have a main axis and a secondary axis. The main axis is the one that matches the container direction (`x` for rows, `y` for columns). The secondary axis is, of course, the other one.
 
-Naturally, flex items will be placed at the top-left corner.
+To align items inside a flex container on its main axis we use the `justify-content` CSS property and for the secondary axis we use `align-items`.
 
-For example, a row:
-```
-┌──────────────────┐
-│ ┌───┐ ┌───┐      │
-│ │   │ │   │      │
-│ └───┘ └───┘      │  display: flex;
-│                  │  flex-direction: row;
-│                  │
-└──────────────────┘
-```
-Well, this shouldn't be the default beahvior IMHO, the items should be centered on the secondary axis by default (in this case - on the `y` axis), like this:
-```
-┌──────────────────┐
-│                  │
-│ ┌───┐ ┌───┐      │
-│ │   │ │   │      │ .flex-row
-│ └───┘ └───┘      │
-│                  │
-└──────────────────┘
-```
-It just makes more sense to me and that's what I need most of the time.
+Naturally, flex items will be placed at the top-left corner, for both rows and columns. This is because the default value for both axes is `flex-start`.
 
-The same goes for columns:
-```
-display: flex;
-flex-direction: column;       .flex-col
-┌──────────┐                  ┌──────────┐
-│ ┌──┐     │                  │   ┌──┐   │
-│ └──┘     │                  │   └──┘   │
-│ ┌──┐     │        vs.       │   ┌──┐   │
-│ └──┘     │                  │   └──┘   │
-│          │                  │          │
-│          │                  │          │
-└──────────┘                  └──────────┘
-```
+While it makes sense for the main axis, it makes less sense for the secondary axis.
+
+When we close our eyes and imagine a navigation bar (or any other row of buttons) we would probably picture it centered on the `y` axis with equal space at the top and at the bottom.
+
+With `css.flex` - package flex containers are **centered on the secondary axis by default**.
+</details>
+
+&nbsp;
+
+------------------------------------------------------------
+
+Flex Direction
+--------------
+There are two main classnames, one for rows and one for columns: 
+* `.flexrow`
+* `.flexcol`
+
+&nbsp;
 
 Main Axis
 ---------
-To place the items along the main axis use one of the suffixes:  
+To place the items along the main axis use `flexrow` | `flexcol` with, optionally, one of the following suffixes:  
 ```
-start | center | end | spread
+-start | -center | -end | -spread
 ```
-> `start` is the default placement for the main axis:  
-> * `flex-row` is an alias of `flex-row-start`  
-> * `flex-col` is an alias of `flex-col-start`
+>* The default for the main axis is `-start` and it can be omitted  
+>`.flexrow` and `.flexrow-start` are the same.  
+`.flexcol` and `.flexcol-start` are the same.  
 
 &nbsp;
 
-`.flex-row-start` / `.flex-row`
+`.flexrow`
 ```
-┌────────────────┐
-│ ┌──┐┌──┐       │
-│ └──┘└──┘       │
-└────────────────┘
-```
-`.flex-row-center`
-```
-┌────────────────┐
-│    ┌──┐┌──┐    │
-│    └──┘└──┘    │
-└────────────────┘
-```
-`.flex-row-end`
-```
-┌────────────────┐
-│       ┌──┐┌──┐ │
-│       └──┘└──┘ │
-└────────────────┘
-```
-`.flex-row-spread` (A.K.A "space-between")
-```
-┌────────────────┐
-│ ┌──┐      ┌──┐ │
-│ └──┘      └──┘ │
-└────────────────┘
+┌──────────────────┐
+│ ┌──┐┌──┐         │
+│ └──┘└──┘         │
+└──────────────────┘
 ```
 
-> To see the column equivalents (e.g. `flex-col-start`), please tilt your head to the left :)
+
+`.flexrow-center`
+```
+┌──────────────────┐
+│     ┌──┐┌──┐     │
+│     └──┘└──┘     │
+└──────────────────┘
+```
+`.flexrow-end`
+```
+┌──────────────────┐
+│         ┌──┐┌──┐ │
+│         └──┘└──┘ │
+└──────────────────┘
+```
+`.flexrow-spread` (A.K.A "space-between")
+```
+┌──────────────────┐
+│ ┌──┐        ┌──┐ │
+│ └──┘        └──┘ │
+└──────────────────┘
+```
+
+> To see the `flexcol` equivalents, please tilt your head to the left :)
 
 &nbsp;
-
 
 Secondary Axis
 --------------
-To align items along the secondary axis we add the classname `.align-` with one of the following suffixes:
+To align items along the secondary axis we add another classname.
+
 
 For rows:
 ```
-top | bottom
+f-top | f-bottom
 ```
 
 For columns:
 ```
-left | right
+f-left | f-right
 ```
 
-For example:
+For rows and columns:
 ```
-.flex-row-center             .flex-col-spread
-.align-top                   .align-right
-┌───────────────┐            ┌────────────┐
-│   ┌──┐ ┌──┐   │            │       ┌──┐ │
-│   └──┘ └──┘   │            │       └──┘ │
-│               │            │            │
-│               │            │            │
-└───────────────┘            │       ┌──┐ │
-                             │       └──┘ │
-                             └────────────┘
+f-stretch
 ```
-> **NOTE:** You can only use the secondary axis classnames together with a main axis classname.
+
+> The "`f-`" prefix is used to reduce the chance of classname collisions.
+
+**NOTE:** Secondary axis classnames don't set `display:flex` and should be used together with a main axis classname.
 
 &nbsp;
 
+Examples:
+```
+.flexrow-center.f-top
+┌─────────────────────┐
+│      ┌──┐ ┌──┐      │
+│      └──┘ └──┘      │
+│                     │
+│                     │
+└─────────────────────┘
+```
+```
+.flexcol-spread.f-right
+┌────────────┐
+│       ┌──┐ │
+│       └──┘ │
+│            │
+│            │
+│       ┌──┐ │
+│       └──┘ │
+└────────────┘
+```
+
+&nbsp;
 
 Centering
 ---------
@@ -190,33 +197,33 @@ To center a single item inside a container use (on the container):
 ```
 
 For multiple items use one of:
-* `.flex-row-center`
-* `.flex-col-center`
+* `.flexrow-center`
+* `.flexcol-center`
 
 ```
-.flex-row-center             .flex-col-center
-┌────────────┐               ┌───────────┐
-│            │               │    ┌─┐    │
-│   ┌─┐┌─┐   │               │    └─┘    │
-│   └─┘└─┘   │               │    ┌─┐    │
-│            │               │    └─┘    │
-└────────────┘               └───────────┘
+.flexrow-center            .flexcol-center
+┌──────────────┐             ┌───────────┐
+│              │             │           │
+│              │             │    ┌─┐    │
+│    ┌─┐┌─┐    │             │    └─┘    │
+│    └─┘└─┘    │             │    ┌─┐    │
+│              │             │    └─┘    │
+│              │             │           │
+└──────────────┘             └───────────┘
 ```
-
 
 > In any case, don't use a secondary axis classname.
 
 &nbsp;
-
 
 Flex item
 ---------
 ```css
 .flex-item
 ```  
-Sets a flex item with `flex-grow: 1;`
+Sets a flex item with `flex: 1 1 auto;`
 
-The most common usages are:
+Common usages:
 1. When all the items in a flex container have the same size and expected to grow/shrink similarly.
 	```
 	┌────────────────┐    ┌────────────────────────┐
@@ -224,7 +231,7 @@ The most common usages are:
 	│└──┘└──┘└──┘└──┘│    │└────┘└────┘└────┘└────┘│
 	└────────────────┘    └────────────────────────┘
 	```
-2. When you need one item in a flex container to be stretchy/greedy and take all the space it could get while the rest of its siblings have specific sizes.
+2. When you need one item in a flex container to be stretchy/greedy and take all the space it could get while the rest of its siblings have static sizes.
 	```
 	┌──────────────────────────┐
 	│┌──┐┌──┐┌──┐┌────────┐┌──┐│
@@ -238,10 +245,10 @@ The most common usages are:
 
 # Reference Images
 ## Rows 
-![flex-row reference](images/flex-row.png)
+![flex-row reference](images/flex-rows.png)
 
 ## Columns
-![flex-col reference](images/flex-col.png)
+![flex-col reference](images/flex-columns.png)
 
 &nbsp;
 
