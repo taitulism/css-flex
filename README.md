@@ -91,7 +91,7 @@ To place the items along the main axis use `flexrow` | `flexcol` with, optionall
 ```
 -start | -center | -end | -spread
 ```
->* The default for the main axis is `-start` and it can be omitted  
+>* `-start` is the default for the main axis and can be omitted:  
 >`.flexrow` and `.flexrow-start` are the same.  
 `.flexcol` and `.flexcol-start` are the same.  
 
@@ -104,7 +104,7 @@ To place the items along the main axis use `flexrow` | `flexcol` with, optionall
 │ └──┘└──┘         │
 └──────────────────┘
 ```
-
+&nbsp;
 
 `.flexrow-center`
 ```
@@ -113,6 +113,8 @@ To place the items along the main axis use `flexrow` | `flexcol` with, optionall
 │     └──┘└──┘     │
 └──────────────────┘
 ```
+&nbsp;
+
 `.flexrow-end`
 ```
 ┌──────────────────┐
@@ -120,6 +122,8 @@ To place the items along the main axis use `flexrow` | `flexcol` with, optionall
 │         └──┘└──┘ │
 └──────────────────┘
 ```
+&nbsp;
+
 `.flexrow-spread` (A.K.A "space-between")
 ```
 ┌──────────────────┐
@@ -134,33 +138,29 @@ To place the items along the main axis use `flexrow` | `flexcol` with, optionall
 
 Secondary Axis
 --------------
-To align items along the secondary axis we add another classname.
+To align items along the secondary axis we add a secodary classname.
 
+Secondary classnames start with an `f-` prefix and should be used together with a main axis classname.
 
 For rows:
-```
-f-top | f-bottom
-```
+* `.f-top`
+* `.f-bottom`
 
 For columns:
-```
-f-left | f-right
-```
+* `.f-left`
+* `.f-right`
 
 For rows and columns:
-```
-f-stretch
-```
-
-> The "`f-`" prefix is used to reduce the chance of classname collisions.
-
-**NOTE:** Secondary axis classnames don't set `display:flex` and should be used together with a main axis classname.
+* `.f-stretch`
 
 &nbsp;
 
+> The "`f-`" prefix is used to reduce the chance of classname collisions.
+
 Examples:
+
+`.flexrow-center.f-top`
 ```
-.flexrow-center.f-top
 ┌─────────────────────┐
 │      ┌──┐ ┌──┐      │
 │      └──┘ └──┘      │
@@ -168,8 +168,10 @@ Examples:
 │                     │
 └─────────────────────┘
 ```
+&nbsp;
+
+`.flexcol-spread.f-right`
 ```
-.flexcol-spread.f-right
 ┌────────────┐
 │       ┌──┐ │
 │       └──┘ │
@@ -187,7 +189,6 @@ Centering
 To center a single item inside a container use (on the container):
 * `.flex-center`
 ```
-.flex-center
 ┌─────────────┐
 │             │
 │     ┌─┐     │
