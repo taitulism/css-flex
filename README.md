@@ -150,12 +150,14 @@ For columns:
 * `.f-left`
 * `.f-right`
 
-For rows and columns:
+For both, rows and columns:
 * `.f-stretch`
 
 &nbsp;
 
 > The "`f-`" prefix is used to reduce the chance of classname collisions.
+
+&nbsp;
 
 Examples:
 
