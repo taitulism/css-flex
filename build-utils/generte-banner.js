@@ -1,7 +1,7 @@
 module.exports = function generateBanner(pkgJson) {
 	const pkgNameAndVersion = pkgJson.name + ' v' + pkgJson.version;
 	const license = `${pkgJson.license} License`;
-	const author = '© Taitu Lizenbaum'; // TODO: pkg.author.name;
+	const author = '© Itai Tenenbaum'; // TODO: pkg.author.name;
 	const year = new Date().getFullYear();
 	const repoUrl = 'https://github.com/taitulism/css-flex'; // TODO: pkg.repository.url;
 
