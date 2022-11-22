@@ -5,10 +5,263 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>CSS Playground</title>
+	<script>
+		/*! sweet-dom v0.0.1 | MIT License | © Itai Tenenbaum 2022 | https://github.com/taitulism/sweet-dom.git */
+		const sweetDom=function(e){"use strict";const t={once:!0},n=(e,t,n,r)=>(e.addEventListener(t,n,r),()=>e.removeEventListener(t,n,r)),r=e=>"string"==typeof e?document.querySelector(e):e;return e.$=(e,t=document)=>t.querySelector(e),e.$$=(e,t=document)=>t.querySelectorAll(e),e.bindEvent=n,e.bindEventOnce=(e,r,s,o)=>{const c="boolean"==typeof o?{...t,capture:o}:o?{...o,...t}:t;return n(e,r,s,c)},e.createElm=(e,...t)=>{const{tag:n,id:r,classnames:s}=(e=>{const[t,...n]=e.split("."),[r,s]=t.split("#");return{tag:r||"div",id:s||void 0,classnames:n||void 0}})(e),o=document.createElement(n);return r&&(o.id=r),s?.length&&o.classList.add(...s),t.length&&o.append(...t),o},e.createFrag=(...e)=>{const t=document.createDocumentFragment();return e.length&&t.append(...e),t},e.insert=e=>({before:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n)},after:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n.nextSibling)}}),e.setAttributes=(e,t)=>{for(const[n,r]of Object.entries(t))e.setAttribute(n,r)},e.setStyle=(e,t)=>{Object.assign(e.style,t)},e}({});
+	</script>
+	<script src="./playground.js"></script>
 	<link rel="stylesheet" href="./playground.css" />
-	<link rel="stylesheet" href="../src/index.css" />
-	<!-- <link rel="stylesheet" href="../dist/<pkg-name>.min.css" /> -->
+	<link rel="stylesheet" href="../flex.css" />
+	<!-- <link rel="stylesheet" href="../flex.min.css" /> -->
 </head>
 <body>
+	<nav id="topic-navigation"></nav>
+	<div id="flex">
+		<section id="flex-rows">
+			<h1>Flex Rows</h1>
+			<h4><code>flexrow</code> === <code>flexrow-start</code></h4><br />
+			<div class="row-triplet">
+				<figure>
+					<figcaption>.flexrow.f-top</figcaption>
+					<div class="flexrow f-top">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-center.f-top</figcaption>
+					<div class="flexrow-center f-top">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-end.f-top</figcaption>
+					<div class="flexrow-end f-top">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="row-triplet">
+				<figure>
+					<figcaption>.flexrow</figcaption>
+					<div class="flexrow">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-center</figcaption>
+					<div class="flexrow-center">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-end</figcaption>
+					<div class="flexrow-end">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="row-triplet">
+				<figure>
+					<figcaption>.flexrow.f-bottom</figcaption>
+					<div class="flexrow f-bottom">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-center.f-bottom</figcaption>
+					<div class="flexrow-center f-bottom">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-end.f-bottom</figcaption>
+					<div class="flexrow-end f-bottom">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="row-triplet">
+				<figure>
+					<figcaption>.flexrow-spread.f-top</figcaption>
+					<div class="flexrow-spread f-top">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-spread</figcaption>
+					<div class="flexrow-spread">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-spread.f-bottom</figcaption>
+					<div class="flexrow-spread f-bottom">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="row-triplet">
+				<figure>
+					<figcaption>.flexrow.f-stretch</figcaption>
+					<div class="flexrow f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-center.f-stretch</figcaption>
+					<div class="flexrow-center f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-end.f-stretch</figcaption>
+					<div class="flexrow-end f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexrow-spread.f-stretch</figcaption>
+					<div class="flexrow-spread f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+		</section>
+
+
+		<section id="flex-columns">
+			<h1>Flex Columns</h1>
+			<h4><code>flexcol</code> === <code>flexcol-start</code></h4><br />
+			<div class="column-triplet">
+				<figure>
+					<figcaption>.flexcol.f-left</figcaption>
+					<div class="flexcol f-left">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol</figcaption>
+					<div class="flexcol">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol.f-right</figcaption>
+					<div class="flexcol f-right">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="column-triplet">
+				<figure>
+					<figcaption>.flexcol-center.f-left</figcaption>
+					<div class="flexcol-center f-left">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-center</figcaption>
+					<div class="flexcol-center">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-center.f-right</figcaption>
+					<div class="flexcol-center f-right">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="column-triplet">
+				<figure>
+					<figcaption>.flexcol-end.f-left</figcaption>
+					<div class="flexcol-end f-left">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-end</figcaption>
+					<div class="flexcol-end">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-end.f-right</figcaption>
+					<div class="flexcol-end f-right">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="column-triplet">
+				<figure>
+					<figcaption>.flexcol-spread.f-left</figcaption>
+					<div class="flexcol-spread f-left">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-spread</figcaption>
+					<div class="flexcol-spread">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-spread.f-right</figcaption>
+					<div class="flexcol-spread f-right">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+			<div class="column-triplet">
+				<figure>
+					<figcaption>.flexcol.f-stretch</figcaption>
+					<div class="flexcol f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-center.f-stretch</figcaption>
+					<div class="flexcol-center f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-end.f-stretch</figcaption>
+					<div class="flexcol-end f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+				<figure>
+					<figcaption>.flexcol-spread.f-stretch</figcaption>
+					<div class="flexcol-spread f-stretch">
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+		</section>
+
+		<section id="flex-misc">
+			<h1>Flex Misc.</h1>
+			<div id="flex-misc-contents" class="flexrow">
+				<figure>
+					<figcaption>.flex-center</figcaption>
+					<div class="flex-center">
+						<span></span>
+					</div>
+				</figure>
+				<br />
+				<figure>
+					<figcaption>.flex-item</figcaption>
+					<div class="flexrow">
+						<span></span><span></span> <span></span>
+						<span class="flex-item">.flex-item</span>
+						<span></span><span></span><span></span>
+					</div>
+				</figure>
+			</div>
+		</section>
+	</div>
+
+	<script> init(); </script>
 </body>
 </html>

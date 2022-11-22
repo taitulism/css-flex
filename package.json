@@ -1,30 +1,36 @@
 {
-	"name": "<pkg-name>",
-	"description": "Doing stuff.",
+	"name": "css.flex",
+	"description": "The CSS flex classnames every project needs.",
 	"license": "MIT",
 	"version": "0.0.0",
-	"private": true,
-	"main": "./dist/<pkg-name>.min.css",
+	"main": "./flex.css",
+	"files": [
+		"flex.min.css",
+		"flex.css"
+	],
+	"scripts": {
+		"dev": "postcss ./flex.css --output ./flex.min.css --watch",
+		"build": "postcss ./flex.css --output ./flex.min.css",
+		"postbuild": "npm run banner",
+		"banner": "node build-utils/add-banner.js ./flex.min.css",
+		"version": "npm run build && git add ./flex.min.css",
+		"postversion": "git push && git push --tags"
+	},
 	"devDependencies": {
 		"cssnano": "^5.1.14",
-		"postcss-cli": "^10.0.0",
-		"postcss-import": "^15.0.0"
+		"postcss-cli": "^10.0.0"
 	},
-	"scripts": {
-		"dev": "postcss src/index.css --output dist/<pkg-name>.min.css --watch",
-		"build": "postcss src/index.css --output dist/<pkg-name>.min.css"
-	},
-	"author": "Taitu Lizenbaum <taitu.dev@gmail.com>",
-	"homepage": "https://github.com/taitulism/<pkg-name>#readme",
-	"bugs": {
-		"url": "https://github.com/taitulism/<pkg-name>/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/taitulism/<pkg-name>.git"
+	"homepage": "https://github.com/taitulism/css-flex#readme",
+	"bugs": "https://github.com/taitulism/css-flex/issues",
+	"repository": "github:taitulism/css-flex",
+	"author": {
+		"name": "Itai Tenenbaum",
+		"email": "taitu.dev@gmail.com",
+		"url": "https://github.com/taitulism"
 	},
 	"keywords": [
 		"css",
-		"style"
+		"style",
+		"flex"
 	]
 }
