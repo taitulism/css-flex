@@ -106,6 +106,7 @@ To place the items along the main axis use `flexrow` | `flexcol` with, optionall
 │ └──┘└──┘         │
 └──────────────────┘
 ```
+> VISUAL BUG: For some reason this looks weird on npm website. [Continue on GitHub...](https://github.com/taitulism/css-flex#main-axis)
 &nbsp;
 
 `.flexrow-center`
