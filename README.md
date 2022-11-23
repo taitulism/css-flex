@@ -1,12 +1,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-css.flex
-========
+my-css-flex
+===========
 The CSS flex classnames every project needs.
 
 ## Install
 ```sh
-npm install css.flex
+npm install my-css-flex
 ```
 
 ```html
@@ -58,7 +58,7 @@ Secondary axis (`x`)
 A few words
 -----------
 >### TL;DR
->With `css.flex` - flex containers are centered on the secondary axis by default because it makes more sense IMHO.
+>With `my-css-flex` - flex containers are centered on the secondary axis by default because it makes more sense IMHO.
 
 <details>
 	<summary>Read More...</summary>
@@ -72,7 +72,7 @@ While it makes sense for the main axis, it makes less sense for the secondary ax
 
 When we close our eyes and imagine a navigation bar (or any other row of buttons) we would probably picture it centered on the `y` axis with equal space at the top and at the bottom.
 
-With `css.flex` - package flex containers are **centered on the secondary axis by default**.
+With `my-css-flex` - package flex containers are **centered on the secondary axis by default**.
 </details>
 
 &nbsp;
