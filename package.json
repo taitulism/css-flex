@@ -2,7 +2,7 @@
 	"name": "my-css-flex",
 	"description": "The CSS flex classnames every project needs.",
 	"license": "MIT",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"main": "./flex.css",
 	"files": [
 		"flex.min.css",
