@@ -10,7 +10,7 @@ npm install my-css-flex
 ```
 
 ```html
-<link rel="stylesheet" href="node_modules/css-flex/flex.min.css" />
+<link rel="stylesheet" href="/node_modules/my-css-flex/flex.min.css" />
 ```
 
 or a CDN Link:
