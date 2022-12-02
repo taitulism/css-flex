@@ -18,7 +18,7 @@
 	},
 	"devDependencies": {
 		"cssnano": "^5.1.14",
-		"postcss-cli": "^10.0.0"
+		"postcss-cli": "^10.1.0"
 	},
 	"homepage": "https://github.com/taitulism/css-flex#readme",
 	"bugs": "https://github.com/taitulism/css-flex/issues",
